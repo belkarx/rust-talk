@@ -78,6 +78,7 @@ fn main() /*-> io::Result<()>*/
         }
     });
 
+    //hang until one of the threads encounters an error (typically because someone left the chat) and then exit gracefully
     let _ = res.join();
 
     //clean up TUI
